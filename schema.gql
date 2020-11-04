@@ -1,0 +1,37 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  """User ID"""
+  id: ID!
+
+  """User's first name"""
+  firstName: String
+
+  """User's last name"""
+  lastName: String
+
+  """User's EMail"""
+  email: String
+
+  """User's age"""
+  age: String
+}
+
+type UserEdge {
+  cursor: String!
+  node: User!
+}
+
+type UserConnection {
+  edges: [UserEdge!]
+  nodes: [User!]
+  totalCount: Int!
+  hasNextPage: Boolean!
+}
+
+type Query {
+  user(id: ID!): User!
+  users: UserConnection!
+}

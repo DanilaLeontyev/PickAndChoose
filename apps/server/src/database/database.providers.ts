@@ -10,10 +10,13 @@ export const databaseProviders = [
       username: process.env.DATABASE_USERNAME,
       password: process.env.DATABASE_PASSWORD,
       database: process.env.DATABASE_NAME,
+      schema: process.env.DATABASE_SCHEMA,
       entities: [
         __dirname + '/../**/*.entity{.ts,.js}',
       ],
       synchronize: true,
+      logging: 'all',
+      logger: 'simple-console',
     } as ConnectionOptions),
   },
 ];

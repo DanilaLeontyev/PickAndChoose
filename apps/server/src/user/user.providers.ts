@@ -3,7 +3,7 @@ import { User } from './user.entity';
 
 export const userProviders = [
   {
-    provide: 'PHOTO_REPOSITORY',
+    provide: 'USER_REPOSITORY',
     useFactory: (connection: Connection) => connection.getRepository(User),
     inject: ['DATABASE_CONNECTION'],
   },
