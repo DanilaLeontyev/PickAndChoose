@@ -4,6 +4,7 @@ import { Entity, Column, PrimaryColumn } from 'typeorm';
 export class User {
   @PrimaryColumn({
     type: 'text',
+    generated: 'uuid',
   })
   id: string;
 

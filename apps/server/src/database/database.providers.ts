@@ -11,6 +11,7 @@ export const databaseProviders = [
       password: process.env.DATABASE_PASSWORD,
       database: process.env.DATABASE_NAME,
       schema: process.env.DATABASE_SCHEMA,
+      uuidExtension: process.env.DATABASE_UUID_EXTENSION,
       entities: [
         __dirname + '/../**/*.entity{.ts,.js}',
       ],
