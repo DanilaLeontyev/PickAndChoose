@@ -2,7 +2,14 @@
   "name": "pac",
   "private": true,
   "devDependencies": {
+    "eslint": "^7.12.1",
     "lerna": "^3.20.2"
   },
-  "useWorkspaces": true
+  "scripts": {
+    "bootstrap": "lerna clean -y && lerna bootstrap"
+  },
+  "useWorkspaces": true,
+  "resolutions": {
+    "eslint": "^7.12.1"
+  }
 }
